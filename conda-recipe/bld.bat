@@ -5,9 +5,8 @@ cd ..
 :: clean old build attempts
 RD /S /Q _skbuild
 
-set BLAS_ROOT=%PREFIX%
-set LAPACK_ROOT=%PREFIX%
-set NUMPY_INCLUDE=%PREFIX%\Include
+set BLA_VENDOR=Intel10_64lp
+
 :: Prefer f2py.exe, if it exists; this is provided by numpy 1.16 (and, we assume, later)
 if EXIST "%PREFIX%\Scripts\f2py.exe" (
   set F2PY=%PREFIX%\Scripts\f2py.exe
